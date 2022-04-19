@@ -10,7 +10,7 @@ const loadPosts = async () => {
       const img = await fetch("https://picsum.photos/1920");
       const blob = await img.blob();
       const imgURL = URL.createObjectURL(blob);
-      // J'ai pas aimé cette solution il y a une phase de non stabilité lors du chargeent
+      // J'ai pas aimé cette solution il y a une phase de non stabilité lors du chargement
       // utilises donc importNode()
       container.innerHTML += `
         <div class='card col-sm-6 col-md-4 col-lg-3 px-0' onclick="showWindow('${imgURL}')">
